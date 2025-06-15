@@ -12,8 +12,7 @@ import {
 import definePlugin from "@utils/types";
 
 // @ts-expect-error isRemix isnt on the upload[] type yet
-const handleMessage: MessageSendListener = (_, __, ex) =>
-    ex.uploads && ex.uploads.forEach((att) => (att.isRemix = true));
+const handleMessage: MessageSendListener = (_, __, ex) => ex.uploads && ex.uploads.forEach((att) => (att.isRemix = true));
 
 export default definePlugin({
     name: "RemixMe",
